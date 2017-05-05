@@ -101,9 +101,9 @@ struct cache_block_t {
     }
     void fill( unsigned time )
     {
-        fprintf(stdout, "---->cache_block_t::fill, m_status: %s\n", cache_block_state_str(m_status));
+        //fprintf(stdout, "---->cache_block_t::fill, m_status: %s\n", cache_block_state_str(m_status));
         if(m_status ==VALID){
-            fprintf(stdout,"---->cache_block_t::fill, m_rpd: %d, m_fill_time: %d, time: %d\n", m_rpd, m_fill_time, time );
+            //fprintf(stdout,"---->cache_block_t::fill, m_rpd: %d, m_fill_time: %d, time: %d\n", m_rpd, m_fill_time, time );
             return;
         }
 

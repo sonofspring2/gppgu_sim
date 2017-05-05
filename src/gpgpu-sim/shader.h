@@ -28,10 +28,7 @@
 
 #ifndef SHADER_H
 #define SHADER_H
-// add self
-#define WARP_LIMIT1 24
-#define SAMPLE_INTERVAL 1000
-//
+
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -62,6 +59,9 @@
 //toggle warp_limit betweeen warp_limit1 and warp_limit2 to test dynamic warp throttling
 #define WARP_LIMIT1 1
 #define WARP_LIMIT2 8
+// add self
+#define SAMPLE_INTERVAL 1000
+//
 
 
 #define NO_OP_FLAG            0xFF
@@ -1175,9 +1175,8 @@ protected:
     class shader_core_ctx *m_core;
     unsigned m_sid;
     unsigned m_tpc;
-    // add self
-    unsigned m_limit;
-    //
+
+
 
     tex_cache *m_L1T; // texture cache
     read_only_cache *m_L1C; // constant cache
@@ -1804,6 +1803,10 @@ private:
 
     // statistics
     shader_core_stats *m_stats;
+
+    // add self
+    unsigned m_limit;
+    //
 
     // CTA scheduling / hardware thread allocation
     unsigned m_n_active_cta; // number of Cooperative Thread Arrays (blocks) currently running on this shader.
