@@ -780,11 +780,6 @@ void baseline_cache::cycle(){
             m_miss_queue.pop_front();
             m_memport->push(mf);
         }
-        //add self;
-        //just print out the inct full message
-        else {
-            fprintf(stdout, "--------->baseline_cache::cycle : m_memport is full! \n");
-        }
     }
     bool data_port_busy = !m_bandwidth_management.data_port_free(); 
     bool fill_port_busy = !m_bandwidth_management.fill_port_free(); 
@@ -793,6 +788,24 @@ void baseline_cache::cycle(){
 }
 
 //add self;
+bool baseline_cache::cycle(bool input){
+    bool full = 0;
+    if ( !m_miss_queue.empty() ) {
+        mem_fetch *mf = m_miss_queue.front();
+        if ( !m_memport->full(mf->size(),mf->get_is_write()) ) {
+            m_miss_queue.pop_front();
+            m_memport->push(mf);
+        }
+        else {
+            full = 1;		
+        }
+    }
+    bool data_port_busy = !m_bandwidth_management.data_port_free(); 
+    bool fill_port_busy = !m_bandwidth_management.fill_port_free(); 
+    m_stats.sample_cache_port_utility(data_port_busy, fill_port_busy); 
+    m_bandwidth_management.replenish_port_bandwidth(); 
+    return full;
+}
 
 
 
