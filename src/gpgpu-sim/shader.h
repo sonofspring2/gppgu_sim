@@ -28,6 +28,10 @@
 
 #ifndef SHADER_H
 #define SHADER_H
+// add self
+#define WARP_LIMIT1 24
+#define SAMPLE_INTERVAL 1000
+//
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -1171,6 +1175,9 @@ protected:
     class shader_core_ctx *m_core;
     unsigned m_sid;
     unsigned m_tpc;
+    // add self
+    unsigned m_limit;
+    //
 
     tex_cache *m_L1T; // texture cache
     read_only_cache *m_L1C; // constant cache

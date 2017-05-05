@@ -50,7 +50,8 @@
 #define PRIORITIZE_MSHR_OVER_WB 1
 #define MAX(a,b) (((a)>(b))?(a):(b))
 #define MIN(a,b) (((a)<(b))?(a):(b))
-
+///add self
+bool g_full = false;
 
 /////////////////////////////////////////////////////////////////////////////
 
@@ -1875,9 +1876,9 @@ void ldst_unit::cycle()
 
     m_L1T->cycle();
     m_L1C->cycle();
-    if( m_L1D ) m_L1D->cycle();
-
-//    if (m_L1D) m_L1D->cycle(is_full);
+    //add self
+    if (m_L1D) g_full = m_L1D->cycle(1);
+    //
 
     warp_inst_t &pipe_reg = *m_dispatch_reg;
     enum mem_stage_stall_type rc_fail = NO_RC_FAIL;
@@ -2491,7 +2492,28 @@ void shader_core_ctx::cycle()
 
     }*/
 
-    // get L2 cache stats
+    //add self
+    if(m_stats->shader_cycles[m_sid] == 1){
+        m_limit = WARP_LIMIT1;
+    }
+
+    //dynamically warp limit
+    if(m_stats->shader_cycles[m_sid] % SAMPLE_INTERVAL == 0){
+
+        if(g_full){
+            m_limit--;
+            set_num_warps_to_limit(m_limit);
+        }else{
+            m_limit++;
+            set_num_warps_to_limit(m_limit);
+        }
+
+        fprintf(stdout, "--->shader_core_ctx::cycle, m_sid: %d in cycle number %lld, set warp limit to %d\n",m_sid, m_stats->shader_cycles[m_sid], m_limit);
+
+    }
+    //
+
+    //add self get L2 cache stats
     if(m_stats->shader_cycles[m_sid] %5000 == 0) {
         struct cache_sub_stats total_l2_css;
         class gpgpu_sim * gpu = get_gpu();
