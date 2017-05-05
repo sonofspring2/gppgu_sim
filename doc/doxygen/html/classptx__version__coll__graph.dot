@@ -1,0 +1,15 @@
+digraph "ptx_version"
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  Node1 [label="ptx_version",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_ptx_version" ,fontname="FreeSans"];
+  Node2 [label="float",height=0.2,width=0.4,color="grey75"];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_sm_version_str" ,fontname="FreeSans"];
+  Node3 [label="string",height=0.2,width=0.4,color="grey75"];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_map_f64_to_f32\nm_texmode_unified\nm_valid" ,fontname="FreeSans"];
+  Node4 [label="bool",height=0.2,width=0.4,color="grey75"];
+  Node5 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_sm_version_valid\nm_ptx_extensions\nm_sm_version" ,fontname="FreeSans"];
+  Node5 [label="unsigned",height=0.2,width=0.4,color="grey75"];
+}

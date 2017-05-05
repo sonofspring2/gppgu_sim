@@ -1,0 +1,14 @@
+digraph "Graphical Class Hierarchy"
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="mem_fetch_interface",height=0.2,width=0.4,color="black",URL="$classmem__fetch__interface.html"];
+  Node0 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node1 [label="L2interface",height=0.2,width=0.4,color="black",URL="$classL2interface.html"];
+  Node0 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 [label="perfect_memory_interface",height=0.2,width=0.4,color="black",URL="$classperfect__memory__interface.html"];
+  Node0 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node3 [label="shader_memory_interface",height=0.2,width=0.4,color="black",URL="$classshader__memory__interface.html"];
+}

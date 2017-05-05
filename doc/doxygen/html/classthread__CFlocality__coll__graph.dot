@@ -1,0 +1,28 @@
+digraph "thread_CFlocality"
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node3 [label="thread_CFlocality",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node4 [label="snap_shot_trigger",height=0.2,width=0.4,color="black",URL="$classsnap__shot__trigger.html"];
+  Node5 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_snap_shot_interval" ,fontname="FreeSans"];
+  Node5 [label="unsigned",height=0.2,width=0.4,color="grey75"];
+  Node6 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node6 [label="spill_log_interface",height=0.2,width=0.4,color="black",URL="$classspill__log__interface.html"];
+  Node7 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_thd_span_archive" ,fontname="FreeSans"];
+  Node7 [label="list\< thread_insn_span \>",height=0.2,width=0.4,color="grey75"];
+  Node8 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_nthreads" ,fontname="FreeSans"];
+  Node8 [label="int",height=0.2,width=0.4,color="black",URL="$classint.html"];
+  Node9 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_thread_pc" ,fontname="FreeSans"];
+  Node9 [label="vector\< address_type \>",height=0.2,width=0.4,color="grey75"];
+  Node10 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_name" ,fontname="FreeSans"];
+  Node10 [label="string",height=0.2,width=0.4,color="grey75"];
+  Node11 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_thd_span" ,fontname="FreeSans"];
+  Node11 [label="thread_insn_span",height=0.2,width=0.4,color="black",URL="$classthread__insn__span.html"];
+  Node12 -> Node11 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_insn_span_count" ,fontname="FreeSans"];
+  Node12 [label="tr1_hash_map\< address\l_type, int \>",height=0.2,width=0.4,color="grey75"];
+  Node5 -> Node11 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_cycle" ,fontname="FreeSans"];
+  Node5 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_cycle" ,fontname="FreeSans"];
+}

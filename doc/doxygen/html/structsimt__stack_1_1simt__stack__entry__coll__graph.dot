@@ -1,0 +1,13 @@
+digraph "simt_stack::simt_stack_entry"
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  Node1 [label="simt_stack::simt_stack\l_entry",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_type" ,fontname="FreeSans"];
+  Node2 [label="stack_entry_type",height=0.2,width=0.4,color="grey75"];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_active_mask" ,fontname="FreeSans"];
+  Node3 [label="bitset\< MAX_WARP_SIZE\l_SIMT_STACK \>",height=0.2,width=0.4,color="grey75"];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_branch_div_cycle\nm_calldepth\nm_recvg_pc\nm_pc" ,fontname="FreeSans"];
+  Node4 [label="unsigned",height=0.2,width=0.4,color="grey75"];
+}

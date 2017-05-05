@@ -1,0 +1,36 @@
+digraph "BufferState::FeedbackSharedBufferPolicy"
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  Node5 [label="BufferState::FeedbackShared\lBufferPolicy",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node6 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node6 [label="BufferState::SharedBuffer\lPolicy",height=0.2,width=0.4,color="black",URL="$classBufferState_1_1SharedBufferPolicy.html"];
+  Node7 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node7 [label="BufferState::BufferPolicy",height=0.2,width=0.4,color="black",URL="$classBufferState_1_1BufferPolicy.html"];
+  Node8 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node8 [label="Module",height=0.2,width=0.4,color="black",URL="$classModule.html"];
+  Node9 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _fullname\n_name" ,fontname="FreeSans"];
+  Node9 [label="string",height=0.2,width=0.4,color="grey75"];
+  Node10 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _children" ,fontname="FreeSans"];
+  Node10 [label="vector\< Module * \>",height=0.2,width=0.4,color="grey75"];
+  Node11 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _buffer_state" ,fontname="FreeSans"];
+  Node11 [label="BufferState",height=0.2,width=0.4,color="black",URL="$classBufferState.html"];
+  Node8 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node12 -> Node11 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _outstanding_classes" ,fontname="FreeSans"];
+  Node12 [label="vector\< queue\< int \> \>",height=0.2,width=0.4,color="grey75"];
+  Node7 -> Node11 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _buffer_policy" ,fontname="FreeSans"];
+  Node13 -> Node11 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _occupancy\n_vcs\n_size\n_classes" ,fontname="FreeSans"];
+  Node13 [label="int",height=0.2,width=0.4,color="black",URL="$classint.html"];
+  Node14 -> Node11 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _wait_for_tail_credit" ,fontname="FreeSans"];
+  Node14 [label="bool",height=0.2,width=0.4,color="grey75"];
+  Node15 -> Node11 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _class_occupancy\n_last_id\n_vc_occupancy\n_in_use_by\n_last_pid" ,fontname="FreeSans"];
+  Node15 [label="vector\< int \>",height=0.2,width=0.4,color="grey75"];
+  Node16 -> Node11 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _tail_sent" ,fontname="FreeSans"];
+  Node16 [label="vector\< bool \>",height=0.2,width=0.4,color="grey75"];
+  Node13 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _shared_buf_occupancy\n_shared_buf_size\n_buf_size" ,fontname="FreeSans"];
+  Node15 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _private_buf_occupancy\n_reserved_slots\n_private_buf_vc_map\n_private_buf_size" ,fontname="FreeSans"];
+  Node12 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _flit_sent_time" ,fontname="FreeSans"];
+  Node13 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _total_mapped_size\n_offset\n_aging_scale\n_vcs\n_min_latency" ,fontname="FreeSans"];
+  Node15 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _occupancy_limit\n_round_trip_time" ,fontname="FreeSans"];
+}

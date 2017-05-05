@@ -1,0 +1,29 @@
+digraph "QTree"
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node4 [label="QTree",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node5 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node5 [label="Network",height=0.2,width=0.4,color="black",URL="$classNetwork.html"];
+  Node6 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node6 [label="TimedModule",height=0.2,width=0.4,color="black",URL="$classTimedModule.html"];
+  Node7 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node7 [label="Module",height=0.2,width=0.4,color="black",URL="$classModule.html"];
+  Node8 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _fullname\n_name" ,fontname="FreeSans"];
+  Node8 [label="string",height=0.2,width=0.4,color="grey75"];
+  Node9 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _children" ,fontname="FreeSans"];
+  Node9 [label="vector\< Module * \>",height=0.2,width=0.4,color="grey75"];
+  Node10 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _eject\n_chan\n_inject" ,fontname="FreeSans"];
+  Node10 [label="vector\< FlitChannel * \>",height=0.2,width=0.4,color="grey75"];
+  Node11 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _timed_modules" ,fontname="FreeSans"];
+  Node11 [label="deque\< TimedModule * \>",height=0.2,width=0.4,color="grey75"];
+  Node12 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _routers" ,fontname="FreeSans"];
+  Node12 [label="vector\< Router * \>",height=0.2,width=0.4,color="grey75"];
+  Node13 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _channels\n_nodes\n_size\n_classes" ,fontname="FreeSans"];
+  Node13 [label="int",height=0.2,width=0.4,color="black",URL="$classint.html"];
+  Node14 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _eject_cred\n_chan_cred\n_inject_cred" ,fontname="FreeSans"];
+  Node14 [label="vector\< Channel * \>",height=0.2,width=0.4,color="grey75"];
+  Node13 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _k\n_n" ,fontname="FreeSans"];
+}

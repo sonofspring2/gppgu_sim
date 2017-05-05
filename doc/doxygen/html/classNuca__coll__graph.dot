@@ -1,0 +1,37 @@
+digraph "Nuca"
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  Node2 [label="Nuca",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node3 [label="Component",height=0.2,width=0.4,color="black",URL="$classComponent.html"];
+  Node4 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" cycle_time\ndelay" ,fontname="FreeSans"];
+  Node4 [label="double",height=0.2,width=0.4,color="grey75"];
+  Node5 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" rt_power\npower" ,fontname="FreeSans"];
+  Node5 [label="powerDef",height=0.2,width=0.4,color="black",URL="$classpowerDef.html"];
+  Node6 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" writeOp\nreadOp\nsearchOp" ,fontname="FreeSans"];
+  Node6 [label="powerComponents",height=0.2,width=0.4,color="black",URL="$classpowerComponents.html"];
+  Node4 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" leakage\nshort_circuit\ndynamic\ngate_leakage\nlonger_channel\l_leakage" ,fontname="FreeSans"];
+  Node7 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" area" ,fontname="FreeSans"];
+  Node7 [label="Area",height=0.2,width=0.4,color="black",URL="$classArea.html"];
+  Node4 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" w\nh\narea" ,fontname="FreeSans"];
+  Node8 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" wire_horizontal\nwire_vertical" ,fontname="FreeSans"];
+  Node8 [label="Wire",height=0.2,width=0.4,color="black",URL="$classWire.html"];
+  Node3 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node4 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" in_rise_time\nwire_spacing\nrepeater_size\nwire_width_init\nrepeater_spacing\nwire_spacing_init\nresistivity\ns_scale\nmin_w_pmos\nwire_width\n..." ,fontname="FreeSans"];
+  Node3 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" global_10\nglobal_20\nglobal\nglobal_30\ntransmitter\nlow_swing\nl_wire\nsense_amp\nglobal_5" ,fontname="FreeSans"];
+  Node9 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" repeated_wire" ,fontname="FreeSans"];
+  Node9 [label="list\< Component \>",height=0.2,width=0.4,color="grey75"];
+  Node10 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" nsense\ninitialized" ,fontname="FreeSans"];
+  Node10 [label="int",height=0.2,width=0.4,color="black",URL="$classint.html"];
+  Node11 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" wt" ,fontname="FreeSans"];
+  Node11 [label="enum Wire_type",height=0.2,width=0.4,color="grey75"];
+  Node12 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" deviceType" ,fontname="FreeSans"];
+  Node12 [label="TechnologyParameter\l::DeviceType",height=0.2,width=0.4,color="black",URL="$classTechnologyParameter_1_1DeviceType.html"];
+  Node4 -> Node12 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" long_channel_leakage\l_reduction\nVdd\nI_on_n\nC_fringe\nC_ox\nI_g_on_n\nI_on_p\nC_g_ideal\nt_ox\nVth\n..." ,fontname="FreeSans"];
+  Node13 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" wire_placement" ,fontname="FreeSans"];
+  Node13 [label="enum Wire_placement",height=0.2,width=0.4,color="grey75"];
+  Node10 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" wt_max\nwt_min" ,fontname="FreeSans"];
+  Node12 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" deviceType" ,fontname="FreeSans"];
+}

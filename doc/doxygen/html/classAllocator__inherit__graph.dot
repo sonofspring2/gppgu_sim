@@ -1,0 +1,31 @@
+digraph "Allocator"
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  Node0 [label="Allocator",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node1 [label="Module",height=0.2,width=0.4,color="black",URL="$classModule.html"];
+  Node0 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 [label="DenseAllocator",height=0.2,width=0.4,color="black",URL="$classDenseAllocator.html"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node3 [label="LOA",height=0.2,width=0.4,color="black",URL="$classLOA.html"];
+  Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node4 [label="MaxSizeMatch",height=0.2,width=0.4,color="black",URL="$classMaxSizeMatch.html"];
+  Node2 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node5 [label="PIM",height=0.2,width=0.4,color="black",URL="$classPIM.html"];
+  Node2 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node6 [label="Wavefront",height=0.2,width=0.4,color="black",URL="$classWavefront.html"];
+  Node0 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node7 [label="SparseAllocator",height=0.2,width=0.4,color="black",URL="$classSparseAllocator.html"];
+  Node7 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node8 [label="iSLIP_Sparse",height=0.2,width=0.4,color="black",URL="$classiSLIP__Sparse.html"];
+  Node7 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node9 [label="SelAlloc",height=0.2,width=0.4,color="black",URL="$classSelAlloc.html"];
+  Node7 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node10 [label="SeparableAllocator",height=0.2,width=0.4,color="black",URL="$classSeparableAllocator.html"];
+  Node10 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node11 [label="SeparableInputFirstAllocator",height=0.2,width=0.4,color="black",URL="$classSeparableInputFirstAllocator.html"];
+  Node10 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node12 [label="SeparableOutputFirstAllocator",height=0.2,width=0.4,color="black",URL="$classSeparableOutputFirstAllocator.html"];
+}

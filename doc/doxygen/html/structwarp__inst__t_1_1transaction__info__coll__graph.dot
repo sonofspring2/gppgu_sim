@@ -1,0 +1,13 @@
+digraph "warp_inst_t::transaction_info"
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  Node1 [label="warp_inst_t::transaction_info",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" bytes" ,fontname="FreeSans"];
+  Node2 [label="bitset\< MAX_MEMORY\l_ACCESS_SIZE \>",height=0.2,width=0.4,color="grey75"];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" active" ,fontname="FreeSans"];
+  Node3 [label="bitset\< MAX_WARP_SIZE \>",height=0.2,width=0.4,color="grey75"];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" chunks" ,fontname="FreeSans"];
+  Node4 [label="bitset\< 4 \>",height=0.2,width=0.4,color="grey75"];
+}

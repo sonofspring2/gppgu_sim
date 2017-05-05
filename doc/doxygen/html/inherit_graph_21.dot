@@ -1,0 +1,8 @@
+digraph "Graphical Class Hierarchy"
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="baseline_cache::bandwidth\l_management",height=0.2,width=0.4,color="black",URL="$classbaseline__cache_1_1bandwidth__management.html",tooltip="Sub-class containing all metadata for port bandwidth management. "];
+}

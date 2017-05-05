@@ -1,0 +1,15 @@
+digraph "CUstream_st"
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  Node1 [label="CUstream_st",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_lock" ,fontname="FreeSans"];
+  Node2 [label="pthread_mutex_t",height=0.2,width=0.4,color="grey75"];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_pending" ,fontname="FreeSans"];
+  Node3 [label="bool",height=0.2,width=0.4,color="grey75"];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_operations" ,fontname="FreeSans"];
+  Node4 [label="list\< stream_operation \>",height=0.2,width=0.4,color="grey75"];
+  Node5 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_uid\nsm_next_stream_uid" ,fontname="FreeSans"];
+  Node5 [label="unsigned",height=0.2,width=0.4,color="grey75"];
+}

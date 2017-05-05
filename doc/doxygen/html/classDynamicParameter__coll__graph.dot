@@ -1,0 +1,20 @@
+digraph "DynamicParameter"
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  Node1 [label="DynamicParameter",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" Nspd\ndram_refresh_period\nV_b_sense" ,fontname="FreeSans"];
+  Node2 [label="double",height=0.2,width=0.4,color="grey75"];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" ram_cell_tech_type" ,fontname="FreeSans"];
+  Node3 [label="uint32_t",height=0.2,width=0.4,color="grey75"];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" data_num_r_subarray\nnum_si_b_bank_per_port\nnum_mats_v_dir\nuse_inp_params\ndata_num_c_subarray\nnum_so_b_subbank\nnumber_addr_bits_mat\ntag_num_r_subarray\nnumber_way_select_signals\l_mat\nnum_si_b_mat\n..." ,fontname="FreeSans"];
+  Node4 [label="int",height=0.2,width=0.4,color="black",URL="$classint.html"];
+  Node5 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" is_valid\nfully_assoc\npure_cam\npure_ram\nis_tag\nis_dram\nis_main_mem" ,fontname="FreeSans"];
+  Node5 [label="bool",height=0.2,width=0.4,color="grey75"];
+  Node6 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" cell\ncam_cell" ,fontname="FreeSans"];
+  Node6 [label="Area",height=0.2,width=0.4,color="black",URL="$classArea.html"];
+  Node2 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" w\nh\narea" ,fontname="FreeSans"];
+  Node7 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" num_se_rd_ports\nnum_wr_ports\nnum_c_subarray\nnum_r_subarray\nnum_search_ports\nnum_rw_ports\nout_w\nnum_rd_ports" ,fontname="FreeSans"];
+  Node7 [label="unsigned",height=0.2,width=0.4,color="grey75"];
+}

@@ -1,0 +1,31 @@
+digraph "SeparableOutputFirstAllocator"
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  Node5 [label="SeparableOutputFirstAllocator",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node6 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node6 [label="SeparableAllocator",height=0.2,width=0.4,color="black",URL="$classSeparableAllocator.html"];
+  Node7 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node7 [label="SparseAllocator",height=0.2,width=0.4,color="black",URL="$classSparseAllocator.html"];
+  Node8 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node8 [label="Allocator",height=0.2,width=0.4,color="black",URL="$classAllocator.html"];
+  Node9 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node9 [label="Module",height=0.2,width=0.4,color="black",URL="$classModule.html"];
+  Node10 -> Node9 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _fullname\n_name" ,fontname="FreeSans"];
+  Node10 [label="string",height=0.2,width=0.4,color="grey75"];
+  Node11 -> Node9 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _children" ,fontname="FreeSans"];
+  Node11 [label="vector\< Module * \>",height=0.2,width=0.4,color="grey75"];
+  Node12 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _inputs\n_outputs" ,fontname="FreeSans"];
+  Node12 [label="int",height=0.2,width=0.4,color="black",URL="$classint.html"];
+  Node13 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _dirty" ,fontname="FreeSans"];
+  Node13 [label="bool",height=0.2,width=0.4,color="grey75"];
+  Node14 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _outmatch\n_inmatch" ,fontname="FreeSans"];
+  Node14 [label="vector\< int \>",height=0.2,width=0.4,color="grey75"];
+  Node15 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _out_occ\n_in_occ" ,fontname="FreeSans"];
+  Node15 [label="set\< int \>",height=0.2,width=0.4,color="grey75"];
+  Node16 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _out_req\n_in_req" ,fontname="FreeSans"];
+  Node16 [label="vector\< map\< int, sRequest \> \>",height=0.2,width=0.4,color="grey75"];
+  Node17 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _input_arb\n_output_arb" ,fontname="FreeSans"];
+  Node17 [label="vector\< Arbiter * \>",height=0.2,width=0.4,color="grey75"];
+}

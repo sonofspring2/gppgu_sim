@@ -1,0 +1,8 @@
+digraph "Graphical Class Hierarchy"
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="opndcoll_rfu_t::dispatch\l_unit_t",height=0.2,width=0.4,color="black",URL="$classopndcoll__rfu__t_1_1dispatch__unit__t.html"];
+}

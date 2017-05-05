@@ -1,0 +1,19 @@
+digraph "Waveguide"
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  Node2 [label="Waveguide",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node3 [label="Component",height=0.2,width=0.4,color="black",URL="$classComponent.html"];
+  Node4 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" cycle_time\ndelay" ,fontname="FreeSans"];
+  Node4 [label="double",height=0.2,width=0.4,color="grey75"];
+  Node5 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" rt_power\npower" ,fontname="FreeSans"];
+  Node5 [label="powerDef",height=0.2,width=0.4,color="black",URL="$classpowerDef.html"];
+  Node6 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" writeOp\nreadOp\nsearchOp" ,fontname="FreeSans"];
+  Node6 [label="powerComponents",height=0.2,width=0.4,color="black",URL="$classpowerComponents.html"];
+  Node4 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" leakage\nshort_circuit\ndynamic\ngate_leakage\nlonger_channel\l_leakage" ,fontname="FreeSans"];
+  Node7 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" area" ,fontname="FreeSans"];
+  Node7 [label="Area",height=0.2,width=0.4,color="black",URL="$classArea.html"];
+  Node4 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" w\nh\narea" ,fontname="FreeSans"];
+}

@@ -1,0 +1,29 @@
+digraph "VC"
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  Node2 [label="VC",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node3 [label="Module",height=0.2,width=0.4,color="black",URL="$classModule.html"];
+  Node4 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _fullname\n_name" ,fontname="FreeSans"];
+  Node4 [label="string",height=0.2,width=0.4,color="grey75"];
+  Node5 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _children" ,fontname="FreeSans"];
+  Node5 [label="vector\< Module * \>",height=0.2,width=0.4,color="grey75"];
+  Node6 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _buffer" ,fontname="FreeSans"];
+  Node6 [label="deque\< Flit * \>",height=0.2,width=0.4,color="grey75"];
+  Node7 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _state" ,fontname="FreeSans"];
+  Node7 [label="eVCState",height=0.2,width=0.4,color="grey75"];
+  Node8 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" VCSTATE" ,fontname="FreeSans"];
+  Node8 [label="char",height=0.2,width=0.4,color="grey75"];
+  Node9 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _route_set" ,fontname="FreeSans"];
+  Node9 [label="OutputSet",height=0.2,width=0.4,color="black",URL="$classOutputSet.html"];
+  Node10 -> Node9 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _outputs" ,fontname="FreeSans"];
+  Node10 [label="set\< OutputSet::sSetElement \>",height=0.2,width=0.4,color="grey75"];
+  Node11 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _out_vc\n_pri\n_last_id\n_priority_donation\n_expected_pid\n_out_port\n_last_pid" ,fontname="FreeSans"];
+  Node11 [label="int",height=0.2,width=0.4,color="black",URL="$classint.html"];
+  Node12 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _watched\n_lookahead_routing" ,fontname="FreeSans"];
+  Node12 [label="bool",height=0.2,width=0.4,color="grey75"];
+  Node13 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _pri_type" ,fontname="FreeSans"];
+  Node13 [label="ePrioType",height=0.2,width=0.4,color="grey75"];
+}

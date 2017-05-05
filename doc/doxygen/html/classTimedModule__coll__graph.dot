@@ -1,0 +1,13 @@
+digraph "TimedModule"
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  Node19 [label="TimedModule",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node20 -> Node19 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node20 [label="Module",height=0.2,width=0.4,color="black",URL="$classModule.html"];
+  Node21 -> Node20 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _fullname\n_name" ,fontname="FreeSans"];
+  Node21 [label="string",height=0.2,width=0.4,color="grey75"];
+  Node22 -> Node20 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _children" ,fontname="FreeSans"];
+  Node22 [label="vector\< Module * \>",height=0.2,width=0.4,color="grey75"];
+}

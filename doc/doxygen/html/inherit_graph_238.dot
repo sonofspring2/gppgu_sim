@@ -1,0 +1,8 @@
+digraph "Graphical Class Hierarchy"
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="XMLParserBase64Tool",height=0.2,width=0.4,color="black",URL="$structXMLParserBase64Tool.html",tooltip="Helper class to include binary data inside XML strings using \"Base64 encoding\". "];
+}

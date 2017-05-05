@@ -1,0 +1,13 @@
+digraph "system_mc"
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  Node1 [label="system_mc",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" dram_pre\npeak_transfer_rate\ndram_act\ndram_rd_coeff\ndram_activity_coeff\ndram_act_coeff\nduty_cycle\ndram_rd\ndram_nop\ndram_req\n..." ,fontname="FreeSans"];
+  Node2 [label="double",height=0.2,width=0.4,color="grey75"];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" llc_line_length\nreq_window_size_per\l_channel\nnumber_mcs\nPRT_entries\naddressbus_width\ntype\nmemory_channels\l_per_mc\nmc_clock\ndatabus_width\nIO_buffer_size\l_per_channel\n..." ,fontname="FreeSans"];
+  Node3 [label="int",height=0.2,width=0.4,color="black",URL="$classint.html"];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" LVDS\nwithPHY" ,fontname="FreeSans"];
+  Node4 [label="bool",height=0.2,width=0.4,color="grey75"];
+}

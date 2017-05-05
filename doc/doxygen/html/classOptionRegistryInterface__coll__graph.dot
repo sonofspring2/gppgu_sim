@@ -1,0 +1,11 @@
+digraph "OptionRegistryInterface"
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  Node2 [label="OptionRegistryInterface",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node3 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_isParsed" ,fontname="FreeSans"];
+  Node3 [label="bool",height=0.2,width=0.4,color="grey75"];
+  Node4 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_optionName\nm_optionDesc" ,fontname="FreeSans"];
+  Node4 [label="string",height=0.2,width=0.4,color="grey75"];
+}

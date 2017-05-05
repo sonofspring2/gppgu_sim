@@ -1,0 +1,31 @@
+digraph "symbol_table"
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="symbol_table",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_symbols" ,fontname="FreeSans"];
+  Node2 [label="map\< std::string, symbol * \>",height=0.2,width=0.4,color="grey75"];
+  Node1 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_parent" ,fontname="FreeSans"];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_globals\nm_consts" ,fontname="FreeSans"];
+  Node3 [label="list\< symbol * \>",height=0.2,width=0.4,color="grey75"];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_types" ,fontname="FreeSans"];
+  Node4 [label="map\< type_info_key,\l type_info *, type_info\l_key_compare \>",height=0.2,width=0.4,color="grey75"];
+  Node5 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_ptx_version" ,fontname="FreeSans"];
+  Node5 [label="ptx_version",height=0.2,width=0.4,color="black",URL="$classptx__version.html"];
+  Node6 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_ptx_version" ,fontname="FreeSans"];
+  Node6 [label="float",height=0.2,width=0.4,color="grey75"];
+  Node7 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_sm_version_str" ,fontname="FreeSans"];
+  Node7 [label="string",height=0.2,width=0.4,color="grey75"];
+  Node8 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_map_f64_to_f32\nm_texmode_unified\nm_valid" ,fontname="FreeSans"];
+  Node8 [label="bool",height=0.2,width=0.4,color="grey75"];
+  Node9 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_sm_version_valid\nm_ptx_extensions\nm_sm_version" ,fontname="FreeSans"];
+  Node9 [label="unsigned",height=0.2,width=0.4,color="grey75"];
+  Node7 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_scope_name" ,fontname="FreeSans"];
+  Node10 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_function_symtab_lookup" ,fontname="FreeSans"];
+  Node10 [label="map\< std::string, symbol\l_table * \>",height=0.2,width=0.4,color="grey75"];
+  Node11 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_function_info_lookup" ,fontname="FreeSans"];
+  Node11 [label="map\< std::string, function\l_info * \>",height=0.2,width=0.4,color="grey75"];
+  Node9 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_global_next\nm_local_next\nm_tex_next\nm_shared_next\nm_reg_allocator\nm_const_next" ,fontname="FreeSans"];
+}

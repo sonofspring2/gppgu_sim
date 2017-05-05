@@ -1,0 +1,43 @@
+digraph "type_info"
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="type_info",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_scope" ,fontname="FreeSans"];
+  Node2 [label="symbol_table",height=0.2,width=0.4,color="black",URL="$classsymbol__table.html"];
+  Node3 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_symbols" ,fontname="FreeSans"];
+  Node3 [label="map\< std::string, symbol * \>",height=0.2,width=0.4,color="grey75"];
+  Node2 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_parent" ,fontname="FreeSans"];
+  Node4 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_globals\nm_consts" ,fontname="FreeSans"];
+  Node4 [label="list\< symbol * \>",height=0.2,width=0.4,color="grey75"];
+  Node5 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_types" ,fontname="FreeSans"];
+  Node5 [label="map\< type_info_key,\l type_info *, type_info\l_key_compare \>",height=0.2,width=0.4,color="grey75"];
+  Node6 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_ptx_version" ,fontname="FreeSans"];
+  Node6 [label="ptx_version",height=0.2,width=0.4,color="black",URL="$classptx__version.html"];
+  Node7 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_ptx_version" ,fontname="FreeSans"];
+  Node7 [label="float",height=0.2,width=0.4,color="grey75"];
+  Node8 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_sm_version_str" ,fontname="FreeSans"];
+  Node8 [label="string",height=0.2,width=0.4,color="grey75"];
+  Node9 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_map_f64_to_f32\nm_texmode_unified\nm_valid" ,fontname="FreeSans"];
+  Node9 [label="bool",height=0.2,width=0.4,color="grey75"];
+  Node10 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_sm_version_valid\nm_ptx_extensions\nm_sm_version" ,fontname="FreeSans"];
+  Node10 [label="unsigned",height=0.2,width=0.4,color="grey75"];
+  Node8 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_scope_name" ,fontname="FreeSans"];
+  Node11 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_function_symtab_lookup" ,fontname="FreeSans"];
+  Node11 [label="map\< std::string, symbol\l_table * \>",height=0.2,width=0.4,color="grey75"];
+  Node12 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_function_info_lookup" ,fontname="FreeSans"];
+  Node12 [label="map\< std::string, function\l_info * \>",height=0.2,width=0.4,color="grey75"];
+  Node10 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_global_next\nm_local_next\nm_tex_next\nm_shared_next\nm_reg_allocator\nm_const_next" ,fontname="FreeSans"];
+  Node13 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_type_info" ,fontname="FreeSans"];
+  Node13 [label="type_info_key",height=0.2,width=0.4,color="black",URL="$classtype__info__key.html"];
+  Node14 -> Node13 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_space_spec" ,fontname="FreeSans"];
+  Node14 [label="memory_space_t",height=0.2,width=0.4,color="black",URL="$classmemory__space__t.html"];
+  Node15 -> Node14 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_type" ,fontname="FreeSans"];
+  Node15 [label="enum _memory_space_t",height=0.2,width=0.4,color="grey75"];
+  Node10 -> Node14 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_bank" ,fontname="FreeSans"];
+  Node16 -> Node13 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_vector_spec\nm_scalar_type_spec\nm_is_function\nm_extern_spec\nm_array_dim\nm_alignment_spec" ,fontname="FreeSans"];
+  Node16 [label="int",height=0.2,width=0.4,color="black",URL="$classint.html"];
+  Node9 -> Node13 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_init\nm_is_non_arch_reg" ,fontname="FreeSans"];
+}

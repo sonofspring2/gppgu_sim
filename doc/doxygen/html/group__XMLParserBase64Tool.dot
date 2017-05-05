@@ -1,0 +1,10 @@
+digraph "Helper class to include binary data inside XML strings using &quot;Base64 encoding&quot;."
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir=LR;
+  Node0 [label="Helper class to include\l binary data inside XML\l strings using \"Base64 encoding\".",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 [label="The XML parser",height=0.2,width=0.4,color="black",URL="$group__XMLParserGeneral.html"];
+  Node1->Node0 [shape=plaintext, dir="back", style="solid"];
+}

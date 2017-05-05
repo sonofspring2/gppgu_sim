@@ -1,0 +1,8 @@
+digraph "Graphical Class Hierarchy"
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="queue\< pair\< int, Flit\l * \> \>",height=0.2,width=0.4,color="black",URL="$classqueue_3_01pair_3_01int_00_01Flit_01_5_01_4_01_4.html"];
+}

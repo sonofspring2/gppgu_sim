@@ -1,0 +1,16 @@
+digraph "results_mem_array"
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  Node1 [label="results_mem_array",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" read_energy\ndelay_sense_amp\nleak_power_request\l_and_reply_networks\nrouting_area_height\l_within_bank\ndelay_addr_din_vertical\l_htree\nleak_power_subbank\l_open_page\nrouting_area_width\l_within_bank\ndelay_reply_network\ndelay_inside_mat\ndelay_crossbar\n..." ,fontname="FreeSans"];
+  Node2 [label="double",height=0.2,width=0.4,color="grey75"];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" power_dataout_vertical\l_htree\npower_senseamp_mux\l_lev_2_predecoder_drivers\npower_row_predecoder\l_drivers\npower_output_drivers\l_at_subarray\npower_bitlines\ntotal_power\npower_senseamp_mux\l_lev_2_predecoder_blocks\npower_addr_horizontal\l_htree\npower_prechg_eq_drivers\npower_senseamp_mux_lev\l_2_decoders\n..." ,fontname="FreeSans"];
+  Node3 [label="powerDef",height=0.2,width=0.4,color="black",URL="$classpowerDef.html"];
+  Node4 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" writeOp\nreadOp\nsearchOp" ,fontname="FreeSans"];
+  Node4 [label="powerComponents",height=0.2,width=0.4,color="black",URL="$classpowerComponents.html"];
+  Node2 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" leakage\nshort_circuit\ndynamic\ngate_leakage\nlonger_channel\l_leakage" ,fontname="FreeSans"];
+  Node5 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" number_activated_mats\l_horizontal_direction\npage_size_in_bits\ndeg_bl_muxing\nNdwl\nnumber_subbanks\nNdsam_lev_1\nNdsam_lev_2\nNdbl" ,fontname="FreeSans"];
+  Node5 [label="int",height=0.2,width=0.4,color="black",URL="$classint.html"];
+}

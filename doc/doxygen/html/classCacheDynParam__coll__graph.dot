@@ -1,0 +1,15 @@
+digraph "CacheDynParam"
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  Node1 [label="CacheDynParam",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" assoc\ndir_duty_cycle\nduty_cycle\nthroughput\nlatency\nnbanks\nexecutionTime\nblockW\ncapacity\nclockRate\n..." ,fontname="FreeSans"];
+  Node2 [label="double",height=0.2,width=0.4,color="grey75"];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" name" ,fontname="FreeSans"];
+  Node3 [label="string",height=0.2,width=0.4,color="grey75"];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" missb_size\nprefetchb_size\nwbb_size\nfu_size" ,fontname="FreeSans"];
+  Node4 [label="int",height=0.2,width=0.4,color="black",URL="$classint.html"];
+  Node5 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" dir_ty" ,fontname="FreeSans"];
+  Node5 [label="enum Dir_type",height=0.2,width=0.4,color="grey75"];
+}

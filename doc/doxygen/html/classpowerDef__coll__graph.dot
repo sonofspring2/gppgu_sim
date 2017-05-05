@@ -1,0 +1,11 @@
+digraph "powerDef"
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  Node1 [label="powerDef",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" writeOp\nreadOp\nsearchOp" ,fontname="FreeSans"];
+  Node2 [label="powerComponents",height=0.2,width=0.4,color="black",URL="$classpowerComponents.html"];
+  Node3 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" leakage\nshort_circuit\ndynamic\ngate_leakage\nlonger_channel\l_leakage" ,fontname="FreeSans"];
+  Node3 [label="double",height=0.2,width=0.4,color="grey75"];
+}

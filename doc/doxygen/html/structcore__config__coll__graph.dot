@@ -1,0 +1,13 @@
+digraph "core_config"
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  Node2 [label="core_config",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node3 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" gpgpu_coalesce_arch" ,fontname="FreeSans"];
+  Node3 [label="int",height=0.2,width=0.4,color="black",URL="$classint.html"];
+  Node4 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" shmem_limited_broadcast\nm_valid" ,fontname="FreeSans"];
+  Node4 [label="bool",height=0.2,width=0.4,color="grey75"];
+  Node5 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" gpgpu_shmem_sizePrefL1\nwarp_size\ngpgpu_max_insn_issue\l_per_warp\nmem_warp_parts\ngpgpu_cache_constl1\l_linesize\ngpgpu_shmem_sizeDefault\nWORD_SIZE\ngpgpu_cache_texl1\l_linesize\ngpgpu_shmem_sizePrefShared\ngpgpu_shmem_size\n..." ,fontname="FreeSans"];
+  Node5 [label="unsigned",height=0.2,width=0.4,color="grey75"];
+}

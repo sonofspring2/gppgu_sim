@@ -1,0 +1,15 @@
+digraph "PCIeParam"
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  Node1 [label="PCIeParam",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" duty_cycle\nperc_load\nclockRate" ,fontname="FreeSans"];
+  Node2 [label="double",height=0.2,width=0.4,color="grey75"];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" name" ,fontname="FreeSans"];
+  Node3 [label="string",height=0.2,width=0.4,color="grey75"];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" num_units\ntype\nnum_channels" ,fontname="FreeSans"];
+  Node4 [label="int",height=0.2,width=0.4,color="black",URL="$classint.html"];
+  Node5 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" withPHY" ,fontname="FreeSans"];
+  Node5 [label="bool",height=0.2,width=0.4,color="grey75"];
+}

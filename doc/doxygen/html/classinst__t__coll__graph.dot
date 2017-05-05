@@ -1,0 +1,39 @@
+digraph "inst_t"
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node3 [label="inst_t",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node4 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" arch_reg" ,fontname="FreeSans"];
+  Node4 [label="anonymous:arch_reg",height=0.2,width=0.4,color="grey75"];
+  Node5 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" sp_op" ,fontname="FreeSans"];
+  Node5 [label="enum special_operations_t",height=0.2,width=0.4,color="grey75"];
+  Node6 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" op" ,fontname="FreeSans"];
+  Node6 [label="enum uarch_op_t",height=0.2,width=0.4,color="grey75"];
+  Node7 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" bar_type" ,fontname="FreeSans"];
+  Node7 [label="enum uarch_bar_t",height=0.2,width=0.4,color="grey75"];
+  Node8 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" mem_op" ,fontname="FreeSans"];
+  Node8 [label="enum mem_operation_t",height=0.2,width=0.4,color="grey75"];
+  Node9 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" cache_op" ,fontname="FreeSans"];
+  Node9 [label="cache_operator_type",height=0.2,width=0.4,color="grey75"];
+  Node10 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" space" ,fontname="FreeSans"];
+  Node10 [label="memory_space_t",height=0.2,width=0.4,color="black",URL="$classmemory__space__t.html"];
+  Node11 -> Node10 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_type" ,fontname="FreeSans"];
+  Node11 [label="enum _memory_space_t",height=0.2,width=0.4,color="grey75"];
+  Node12 -> Node10 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_bank" ,fontname="FreeSans"];
+  Node12 [label="unsigned",height=0.2,width=0.4,color="grey75"];
+  Node13 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" pred\nsrc\nar1\ndst\nar2" ,fontname="FreeSans"];
+  Node13 [label="int",height=0.2,width=0.4,color="black",URL="$classint.html"];
+  Node14 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" memory_op" ,fontname="FreeSans"];
+  Node14 [label="_memory_op_t",height=0.2,width=0.4,color="grey75"];
+  Node15 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_decoded" ,fontname="FreeSans"];
+  Node15 [label="bool",height=0.2,width=0.4,color="grey75"];
+  Node16 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" oprnd_type" ,fontname="FreeSans"];
+  Node16 [label="enum uarch_operand\l_type_t",height=0.2,width=0.4,color="grey75"];
+  Node17 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" red_type" ,fontname="FreeSans"];
+  Node17 [label="enum uarch_red_t",height=0.2,width=0.4,color="grey75"];
+  Node12 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" num_operands\ndata_size\nis_vectorin\npc\nin\nisize\nreconvergence\l_pc\nout\nbar_count\nlatency\n..." ,fontname="FreeSans"];
+  Node18 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" op_pipe" ,fontname="FreeSans"];
+  Node18 [label="enum operation_pipeline_t",height=0.2,width=0.4,color="grey75"];
+}

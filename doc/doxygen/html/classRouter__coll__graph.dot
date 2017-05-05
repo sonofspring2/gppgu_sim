@@ -1,0 +1,30 @@
+digraph "Router"
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node6 [label="Router",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node7 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node7 [label="TimedModule",height=0.2,width=0.4,color="black",URL="$classTimedModule.html"];
+  Node8 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node8 [label="Module",height=0.2,width=0.4,color="black",URL="$classModule.html"];
+  Node9 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _fullname\n_name" ,fontname="FreeSans"];
+  Node9 [label="string",height=0.2,width=0.4,color="grey75"];
+  Node10 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _children" ,fontname="FreeSans"];
+  Node10 [label="vector\< Module * \>",height=0.2,width=0.4,color="grey75"];
+  Node11 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _active_packets\n_sent_flits\n_received_flits\n_stored_flits\n_outstanding_credits" ,fontname="FreeSans"];
+  Node11 [label="vector\< vector\< int \> \>",height=0.2,width=0.4,color="grey75"];
+  Node12 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _input_channels\n_output_channels" ,fontname="FreeSans"];
+  Node12 [label="vector\< FlitChannel * \>",height=0.2,width=0.4,color="grey75"];
+  Node13 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _internal_speedup\n_partial_internal\l_cycles" ,fontname="FreeSans"];
+  Node13 [label="double",height=0.2,width=0.4,color="grey75"];
+  Node14 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" STALL_CROSSBAR_CONFLICT\n_credit_delay\n_crossbar_delay\n_output_speedup\n_id\n_inputs\nSTALL_BUFFER_BUSY\n_input_speedup\nSTALL_BUFFER_CONFLICT\n_classes\n..." ,fontname="FreeSans"];
+  Node14 [label="int",height=0.2,width=0.4,color="black",URL="$classint.html"];
+  Node15 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _buffer_busy_stalls\n_crossbar_conflict\l_stalls\n_buffer_reserved\l_stalls\n_buffer_full_stalls\n_buffer_conflict\l_stalls" ,fontname="FreeSans"];
+  Node15 [label="vector\< int \>",height=0.2,width=0.4,color="grey75"];
+  Node16 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _channel_faults" ,fontname="FreeSans"];
+  Node16 [label="vector\< bool \>",height=0.2,width=0.4,color="grey75"];
+  Node17 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _output_credits\n_input_credits" ,fontname="FreeSans"];
+  Node17 [label="vector\< Channel * \>",height=0.2,width=0.4,color="grey75"];
+}

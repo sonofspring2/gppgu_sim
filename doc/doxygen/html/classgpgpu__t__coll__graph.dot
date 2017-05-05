@@ -1,0 +1,29 @@
+digraph "gpgpu_t"
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node2 [label="gpgpu_t",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node3 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_TextureRefToTexureInfo" ,fontname="FreeSans"];
+  Node3 [label="map\< const struct texture\lReference *, const struct\l textureInfo * \>",height=0.2,width=0.4,color="grey75"];
+  Node4 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_TextureRefToCudaArray" ,fontname="FreeSans"];
+  Node4 [label="map\< const struct texture\lReference *, const struct\l cudaArray * \>",height=0.2,width=0.4,color="grey75"];
+  Node5 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" ptx_inst_debug_file" ,fontname="FreeSans"];
+  Node5 [label="FILE *",height=0.2,width=0.4,color="grey75"];
+  Node6 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_NameToTextureRef" ,fontname="FreeSans"];
+  Node6 [label="map\< std::string, const\l struct textureReference * \>",height=0.2,width=0.4,color="grey75"];
+  Node7 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_TextureRefToAttribute" ,fontname="FreeSans"];
+  Node7 [label="map\< const struct texture\lReference *, const struct\l textureReferenceAttr * \>",height=0.2,width=0.4,color="grey75"];
+  Node8 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_dev_malloc" ,fontname="FreeSans"];
+  Node8 [label="unsigned",height=0.2,width=0.4,color="grey75"];
+  Node9 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_global_mem\nm_tex_mem\nm_surf_mem" ,fontname="FreeSans"];
+  Node9 [label="memory_space",height=0.2,width=0.4,color="black",URL="$classmemory__space.html"];
+  Node10 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_function_model_config" ,fontname="FreeSans"];
+  Node10 [label="gpgpu_functional_sim\l_config",height=0.2,width=0.4,color="black",URL="$classgpgpu__functional__sim__config.html"];
+  Node11 -> Node10 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" g_ptx_inst_debug_file" ,fontname="FreeSans"];
+  Node11 [label="char",height=0.2,width=0.4,color="grey75"];
+  Node12 -> Node10 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" g_ptx_inst_debug_to\l_file\nm_experimental_lib\l_support\nm_ptx_convert_to\l_ptxplus\ng_ptx_inst_debug\l_thread_uid\nm_ptx_use_cuobjdump" ,fontname="FreeSans"];
+  Node12 [label="int",height=0.2,width=0.4,color="black",URL="$classint.html"];
+  Node8 -> Node10 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_texcache_linesize\nm_ptx_force_max_capability" ,fontname="FreeSans"];
+}

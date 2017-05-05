@@ -1,0 +1,11 @@
+digraph "shader_core_power_stats_pod"
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  Node2 [label="shader_core_power_stats_pod",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node3 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_pipeline_duty_cycle" ,fontname="FreeSans"];
+  Node3 [label="float",height=0.2,width=0.4,color="grey75"];
+  Node4 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_write_regfile_acesses\nm_num_sfu_committed\nm_num_mem_acesses\nm_num_tex_inst\nm_num_trans_acesses\nm_num_sfu_acesses\nm_read_regfile_acesses\nm_num_imul24_acesses\nm_num_INTdecoded_insn\nm_num_decoded_insn\n..." ,fontname="FreeSans"];
+  Node4 [label="unsigned",height=0.2,width=0.4,color="grey75"];
+}

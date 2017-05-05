@@ -1,0 +1,15 @@
+digraph "CUevent_st"
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  Node1 [label="CUevent_st",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_gpu_tot_sim_cycle" ,fontname="FreeSans"];
+  Node2 [label="double",height=0.2,width=0.4,color="grey75"];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_wallclock" ,fontname="FreeSans"];
+  Node3 [label="time_t",height=0.2,width=0.4,color="grey75"];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_next_event_uid\nm_updates\nm_uid" ,fontname="FreeSans"];
+  Node4 [label="int",height=0.2,width=0.4,color="black",URL="$classint.html"];
+  Node5 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_done\nm_blocking" ,fontname="FreeSans"];
+  Node5 [label="bool",height=0.2,width=0.4,color="grey75"];
+}

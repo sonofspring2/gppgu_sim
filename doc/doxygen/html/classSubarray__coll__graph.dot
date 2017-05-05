@@ -1,0 +1,37 @@
+digraph "Subarray"
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  Node2 [label="Subarray",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node3 [label="Component",height=0.2,width=0.4,color="black",URL="$classComponent.html"];
+  Node4 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" cycle_time\ndelay" ,fontname="FreeSans"];
+  Node4 [label="double",height=0.2,width=0.4,color="grey75"];
+  Node5 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" rt_power\npower" ,fontname="FreeSans"];
+  Node5 [label="powerDef",height=0.2,width=0.4,color="black",URL="$classpowerDef.html"];
+  Node6 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" writeOp\nreadOp\nsearchOp" ,fontname="FreeSans"];
+  Node6 [label="powerComponents",height=0.2,width=0.4,color="black",URL="$classpowerComponents.html"];
+  Node4 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" leakage\nshort_circuit\ndynamic\ngate_leakage\nlonger_channel\l_leakage" ,fontname="FreeSans"];
+  Node7 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" area" ,fontname="FreeSans"];
+  Node7 [label="Area",height=0.2,width=0.4,color="black",URL="$classArea.html"];
+  Node4 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" w\nh\narea" ,fontname="FreeSans"];
+  Node4 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" C_wl\nC_wl_cam\nR_wl\nC_bl\nC_bl_cam\nR_wl_ram\nR_wl_cam\nC_wl_ram" ,fontname="FreeSans"];
+  Node8 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" num_cols_fa_ram\nnum_cols_fa_cam" ,fontname="FreeSans"];
+  Node8 [label="int32_t",height=0.2,width=0.4,color="grey75"];
+  Node9 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" dp" ,fontname="FreeSans"];
+  Node9 [label="DynamicParameter",height=0.2,width=0.4,color="black",URL="$classDynamicParameter.html"];
+  Node4 -> Node9 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" Nspd\ndram_refresh_period\nV_b_sense" ,fontname="FreeSans"];
+  Node10 -> Node9 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" ram_cell_tech_type" ,fontname="FreeSans"];
+  Node10 [label="uint32_t",height=0.2,width=0.4,color="grey75"];
+  Node11 -> Node9 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" data_num_r_subarray\nnum_si_b_bank_per_port\nnum_mats_v_dir\nuse_inp_params\ndata_num_c_subarray\nnum_so_b_subbank\nnumber_addr_bits_mat\ntag_num_r_subarray\nnumber_way_select_signals\l_mat\nnum_si_b_mat\n..." ,fontname="FreeSans"];
+  Node11 [label="int",height=0.2,width=0.4,color="black",URL="$classint.html"];
+  Node12 -> Node9 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" is_valid\nfully_assoc\npure_cam\npure_ram\nis_tag\nis_dram\nis_main_mem" ,fontname="FreeSans"];
+  Node12 [label="bool",height=0.2,width=0.4,color="grey75"];
+  Node7 -> Node9 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" cell\ncam_cell" ,fontname="FreeSans"];
+  Node13 -> Node9 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" num_se_rd_ports\nnum_wr_ports\nnum_c_subarray\nnum_r_subarray\nnum_search_ports\nnum_rw_ports\nout_w\nnum_rd_ports" ,fontname="FreeSans"];
+  Node13 [label="unsigned",height=0.2,width=0.4,color="grey75"];
+  Node12 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" is_fa" ,fontname="FreeSans"];
+  Node7 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" cell\ncam_cell" ,fontname="FreeSans"];
+  Node13 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" num_cols\nnum_rows" ,fontname="FreeSans"];
+}

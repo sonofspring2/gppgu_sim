@@ -1,0 +1,41 @@
+digraph "system_core"
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="system_core",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" predictor" ,fontname="FreeSans"];
+  Node2 [label="predictor_systemcore",height=0.2,width=0.4,color="black",URL="$structpredictor__systemcore.html"];
+  Node3 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" predictor_accesses" ,fontname="FreeSans"];
+  Node3 [label="double",height=0.2,width=0.4,color="grey75"];
+  Node4 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" prediction_scheme" ,fontname="FreeSans"];
+  Node4 [label="char",height=0.2,width=0.4,color="grey75"];
+  Node5 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" prediction_width\nlocal_predictor_size\nglobal_predictor_entries\npredictor_size\nlocal_predictor_entries\nchooser_predictor_bits\nglobal_predictor_bits\npredictor_entries\nchooser_predictor_entries" ,fontname="FreeSans"];
+  Node5 [label="int",height=0.2,width=0.4,color="black",URL="$classint.html"];
+  Node6 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" BTB" ,fontname="FreeSans"];
+  Node6 [label="BTB_systemcore",height=0.2,width=0.4,color="black",URL="$structBTB__systemcore.html"];
+  Node3 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" write_hits\nread_misses\nread_hits\nwrite_misses\nwrite_accesses\ntotal_accesses\ntotal_misses\nreplacements\ntotal_hits\nread_accesses\n..." ,fontname="FreeSans"];
+  Node5 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" BTB_config" ,fontname="FreeSans"];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" MemManU_I_duty_cycle\ncontext_switches\nwindowed_reg_accesses\ninst_window_wakeup_accesses\nstore_instructions\ncommitted_instructions\ntotal_instructions\nFPU_per_core\nfloat_regfile_reads\ninst_window_selections\n..." ,fontname="FreeSans"];
+  Node7 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" itlb" ,fontname="FreeSans"];
+  Node7 [label="itlb_systemcore",height=0.2,width=0.4,color="black",URL="$structitlb__systemcore.html"];
+  Node3 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" total_accesses\ntotal_misses\nconflicts\ntotal_hits" ,fontname="FreeSans"];
+  Node5 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" cache_policy\nnumber_entries" ,fontname="FreeSans"];
+  Node8 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" icache" ,fontname="FreeSans"];
+  Node8 [label="icache_systemcore",height=0.2,width=0.4,color="black",URL="$structicache__systemcore.html"];
+  Node3 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" prefetch_buffer_hits\nprefetch_buffer_reads\nfill_buffer_accesses\nread_misses\nprefetch_buffer_accesses\nread_hits\ntotal_accesses\nicache_config\ntotal_misses\nconflicts\n..." ,fontname="FreeSans"];
+  Node5 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" cache_policy\nbuffer_sizes" ,fontname="FreeSans"];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" Dcache_dual_pump\ndivider_multiplier\nLSU_order\nFPU" ,fontname="FreeSans"];
+  Node5 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" rename_scheme\ninstruction_window\l_size\ncommit_width\nmachine_bits\nnumber_of_BPT\nfetch_width\nsimd_width\ncollector_units\nfp_instruction\l_window_size\nvirtual_address\l_width\n..." ,fontname="FreeSans"];
+  Node9 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" sharedmemory\ndcache\ntcache\nccache" ,fontname="FreeSans"];
+  Node9 [label="dcache_systemcore",height=0.2,width=0.4,color="black",URL="$structdcache__systemcore.html"];
+  Node3 -> Node9 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" write_hits\nprefetch_buffer\l_hits\nprefetch_buffer\l_reads\nfill_buffer_accesses\nread_misses\nprefetch_buffer\l_accesses\nread_hits\nwrite_misses\nwrite_accesses\ntotal_accesses\n..." ,fontname="FreeSans"];
+  Node5 -> Node9 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" cache_policy\nbuffer_sizes" ,fontname="FreeSans"];
+  Node10 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" gpgpu_clock_gated_lanes\nopt_local\nx86" ,fontname="FreeSans"];
+  Node10 [label="bool",height=0.2,width=0.4,color="grey75"];
+  Node11 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" dtlb" ,fontname="FreeSans"];
+  Node11 [label="dtlb_systemcore",height=0.2,width=0.4,color="black",URL="$structdtlb__systemcore.html"];
+  Node3 -> Node11 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" write_hits\nread_misses\nread_hits\nwrite_misses\nwrite_accesses\ntotal_accesses\ntotal_misses\nconflicts\ntotal_hits\nread_accesses\n..." ,fontname="FreeSans"];
+  Node5 -> Node11 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" cache_policy\nnumber_entries" ,fontname="FreeSans"];
+}

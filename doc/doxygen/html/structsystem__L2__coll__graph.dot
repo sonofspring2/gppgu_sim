@@ -1,0 +1,15 @@
+digraph "system_L2"
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  Node1 [label="system_L2",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" homenode_read_misses\nhomenode_write_accesses\nwrite_hits\nprefetch_buffer_hits\nprefetch_buffer_reads\nfill_buffer_accesses\nread_misses\ndir_duty_cycle\nhomenode_write_hits\nduty_cycle\n..." ,fontname="FreeSans"];
+  Node2 [label="double",height=0.2,width=0.4,color="grey75"];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" threeD_stack" ,fontname="FreeSans"];
+  Node3 [label="char",height=0.2,width=0.4,color="grey75"];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" cache_policy\ndevice_type\nbuffer_sizes\nports\nclockrate" ,fontname="FreeSans"];
+  Node4 [label="int",height=0.2,width=0.4,color="black",URL="$classint.html"];
+  Node5 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" merged_dir" ,fontname="FreeSans"];
+  Node5 [label="bool",height=0.2,width=0.4,color="grey75"];
+}

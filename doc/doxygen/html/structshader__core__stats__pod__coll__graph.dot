@@ -1,0 +1,17 @@
+digraph "shader_core_stats_pod"
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  Node2 [label="shader_core_stats_pod",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node3 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_pipeline_duty_cycle" ,fontname="FreeSans"];
+  Node3 [label="float",height=0.2,width=0.4,color="grey75"];
+  Node4 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" n_mem_to_simt\nn_simt_to_mem" ,fontname="FreeSans"];
+  Node4 [label="long *",height=0.2,width=0.4,color="grey75"];
+  Node5 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" gpgpu_n_mem_l2_write\l_allocate\ngpgpu_n_mem_const\ngpgpu_n_mem_write\l_local\ngpgpu_n_mem_l1_write\l_allocate\ngpgpu_n_mem_write\l_global\ngpgpu_n_mem_l2_writeback\ngpgpu_n_mem_read_inst\ngpgpu_n_mem_read_global\ngpgpu_n_mem_read_local\ngpgpu_n_mem_texture\n..." ,fontname="FreeSans"];
+  Node5 [label="int",height=0.2,width=0.4,color="black",URL="$classint.html"];
+  Node6 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" made_write_mfs\ngpgpu_n_const_insn\nm_write_regfile_acesses\nm_num_sfu_committed\nm_n_diverge\nm_num_mem_acesses\ngpgpu_n_param_insn\nm_num_tex_inst\nmade_read_mfs\ngpgpu_n_cmem_portconflict\n..." ,fontname="FreeSans"];
+  Node6 [label="unsigned",height=0.2,width=0.4,color="grey75"];
+  Node7 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" shader_core_stats_pod\l_start" ,fontname="FreeSans"];
+  Node7 [label="void *",height=0.2,width=0.4,color="grey75"];
+}

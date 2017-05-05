@@ -1,0 +1,17 @@
+digraph "type_info_key"
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  Node1 [label="type_info_key",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_space_spec" ,fontname="FreeSans"];
+  Node2 [label="memory_space_t",height=0.2,width=0.4,color="black",URL="$classmemory__space__t.html"];
+  Node3 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_type" ,fontname="FreeSans"];
+  Node3 [label="enum _memory_space_t",height=0.2,width=0.4,color="grey75"];
+  Node4 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_bank" ,fontname="FreeSans"];
+  Node4 [label="unsigned",height=0.2,width=0.4,color="grey75"];
+  Node5 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_vector_spec\nm_scalar_type_spec\nm_is_function\nm_extern_spec\nm_array_dim\nm_alignment_spec" ,fontname="FreeSans"];
+  Node5 [label="int",height=0.2,width=0.4,color="black",URL="$classint.html"];
+  Node6 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_init\nm_is_non_arch_reg" ,fontname="FreeSans"];
+  Node6 [label="bool",height=0.2,width=0.4,color="grey75"];
+}

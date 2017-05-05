@@ -1,0 +1,21 @@
+digraph "mem_array"
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  Node1 [label="mem_array",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" read_energy\ndelay_sense_amp\nwidth\nleak_power_request\l_and_reply_networks\nleak_power_subbank\l_open_page\nsubarray_height\nwrite_energy\nall_banks_width\nsubarray_length\narea_efficiency\n..." ,fontname="FreeSans"];
+  Node2 [label="double",height=0.2,width=0.4,color="grey75"];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" arr_min" ,fontname="FreeSans"];
+  Node3 [label="min_values_t",height=0.2,width=0.4,color="black",URL="$classmin__values__t.html"];
+  Node2 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" min_dyn\nmin_delay\nmin_leakage\nmin_cyc\nmin_area" ,fontname="FreeSans"];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" power_searchline_precharge\npower_dataout_vertical\l_htree\npower_senseamp_mux\l_lev_2_predecoder_drivers\npower_row_predecoder\l_drivers\npower_htree_out_search\npower_htree_in_search\npower_matchline_precharge\npower_output_drivers_at\l_subarray\npower_bitlines\npower_senseamp_mux_lev\l_2_predecoder_blocks\n..." ,fontname="FreeSans"];
+  Node4 [label="powerDef",height=0.2,width=0.4,color="black",URL="$classpowerDef.html"];
+  Node5 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" writeOp\nreadOp\nsearchOp" ,fontname="FreeSans"];
+  Node5 [label="powerComponents",height=0.2,width=0.4,color="black",URL="$classpowerComponents.html"];
+  Node2 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" leakage\nshort_circuit\ndynamic\ngate_leakage\nlonger_channel\l_leakage" ,fontname="FreeSans"];
+  Node6 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" deg_bl_muxing\nNdwl\nNdsam_lev_1\nNdsam_lev_2\nNdbl\nNdcm" ,fontname="FreeSans"];
+  Node6 [label="int",height=0.2,width=0.4,color="black",URL="$classint.html"];
+  Node7 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" wt" ,fontname="FreeSans"];
+  Node7 [label="enum Wire_type",height=0.2,width=0.4,color="grey75"];
+}

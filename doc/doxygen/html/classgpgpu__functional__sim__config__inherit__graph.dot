@@ -1,0 +1,9 @@
+digraph "gpgpu_functional_sim_config"
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  Node0 [label="gpgpu_functional_sim\l_config",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node0 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node1 [label="gpgpu_sim_config",height=0.2,width=0.4,color="black",URL="$classgpgpu__sim__config.html"];
+}

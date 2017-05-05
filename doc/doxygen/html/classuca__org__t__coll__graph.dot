@@ -1,0 +1,34 @@
+digraph "uca_org_t"
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  Node1 [label="uca_org_t",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" cache_ht\narea_efficiency\ncycle_time\nleak_power_with\l_sleep_transistors\l_in_mats\naccess_time\nvdd_periph_global\narea\ncache_len" ,fontname="FreeSans"];
+  Node2 [label="double",height=0.2,width=0.4,color="grey75"];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" file_n" ,fontname="FreeSans"];
+  Node3 [label="char",height=0.2,width=0.4,color="grey75"];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" power" ,fontname="FreeSans"];
+  Node4 [label="powerDef",height=0.2,width=0.4,color="black",URL="$classpowerDef.html"];
+  Node5 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" writeOp\nreadOp\nsearchOp" ,fontname="FreeSans"];
+  Node5 [label="powerComponents",height=0.2,width=0.4,color="black",URL="$classpowerComponents.html"];
+  Node2 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" leakage\nshort_circuit\ndynamic\ngate_leakage\nlonger_channel\l_leakage" ,fontname="FreeSans"];
+  Node6 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" data_array2\ntag_array2" ,fontname="FreeSans"];
+  Node6 [label="mem_array",height=0.2,width=0.4,color="black",URL="$classmem__array.html"];
+  Node2 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" read_energy\ndelay_sense_amp\nwidth\nleak_power_request\l_and_reply_networks\nleak_power_subbank\l_open_page\nsubarray_height\nwrite_energy\nall_banks_width\nsubarray_length\narea_efficiency\n..." ,fontname="FreeSans"];
+  Node7 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" arr_min" ,fontname="FreeSans"];
+  Node7 [label="min_values_t",height=0.2,width=0.4,color="black",URL="$classmin__values__t.html"];
+  Node2 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" min_dyn\nmin_delay\nmin_leakage\nmin_cyc\nmin_area" ,fontname="FreeSans"];
+  Node4 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" power_searchline_precharge\npower_dataout_vertical\l_htree\npower_senseamp_mux\l_lev_2_predecoder_drivers\npower_row_predecoder\l_drivers\npower_htree_out_search\npower_htree_in_search\npower_matchline_precharge\npower_output_drivers_at\l_subarray\npower_bitlines\npower_senseamp_mux_lev\l_2_predecoder_blocks\n..." ,fontname="FreeSans"];
+  Node8 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" deg_bl_muxing\nNdwl\nNdsam_lev_1\nNdsam_lev_2\nNdbl\nNdcm" ,fontname="FreeSans"];
+  Node8 [label="int",height=0.2,width=0.4,color="black",URL="$classint.html"];
+  Node9 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" wt" ,fontname="FreeSans"];
+  Node9 [label="enum Wire_type",height=0.2,width=0.4,color="grey75"];
+  Node10 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" data_array\ntag_array" ,fontname="FreeSans"];
+  Node10 [label="results_mem_array",height=0.2,width=0.4,color="black",URL="$structresults__mem__array.html"];
+  Node2 -> Node10 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" read_energy\ndelay_sense_amp\nleak_power_request\l_and_reply_networks\nrouting_area_height\l_within_bank\ndelay_addr_din_vertical\l_htree\nleak_power_subbank\l_open_page\nrouting_area_width\l_within_bank\ndelay_reply_network\ndelay_inside_mat\ndelay_crossbar\n..." ,fontname="FreeSans"];
+  Node4 -> Node10 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" power_dataout_vertical\l_htree\npower_senseamp_mux\l_lev_2_predecoder_drivers\npower_row_predecoder\l_drivers\npower_output_drivers\l_at_subarray\npower_bitlines\ntotal_power\npower_senseamp_mux\l_lev_2_predecoder_blocks\npower_addr_horizontal\l_htree\npower_prechg_eq_drivers\npower_senseamp_mux_lev\l_2_decoders\n..." ,fontname="FreeSans"];
+  Node8 -> Node10 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" number_activated_mats\l_horizontal_direction\npage_size_in_bits\ndeg_bl_muxing\nNdwl\nnumber_subbanks\nNdsam_lev_1\nNdsam_lev_2\nNdbl" ,fontname="FreeSans"];
+  Node11 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" valid" ,fontname="FreeSans"];
+  Node11 [label="bool",height=0.2,width=0.4,color="grey75"];
+}

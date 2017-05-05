@@ -1,0 +1,15 @@
+digraph "my_time_vector"
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  Node1 [label="my_time_vector",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" ld_time_dist\noveral_ld_time_dist\noveral_st_time_dist\nst_time_dist" ,fontname="FreeSans"];
+  Node2 [label="vector\< double \>",height=0.2,width=0.4,color="grey75"];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" st_time_map\nld_time_map" ,fontname="FreeSans"];
+  Node3 [label="map\< unsigned int,\l std::vector\< long int \> \>",height=0.2,width=0.4,color="grey75"];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" overal_ld_count\noveral_st_count" ,fontname="FreeSans"];
+  Node4 [label="int",height=0.2,width=0.4,color="black",URL="$classint.html"];
+  Node5 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" st_vector_size\nld_vector_size" ,fontname="FreeSans"];
+  Node5 [label="unsigned",height=0.2,width=0.4,color="grey75"];
+}

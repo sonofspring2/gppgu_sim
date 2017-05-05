@@ -1,0 +1,35 @@
+digraph "Power_Module"
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node2 [label="Power_Module",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node3 [label="Module",height=0.2,width=0.4,color="black",URL="$classModule.html"];
+  Node4 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _fullname\n_name" ,fontname="FreeSans"];
+  Node4 [label="string",height=0.2,width=0.4,color="grey75"];
+  Node5 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _children" ,fontname="FreeSans"];
+  Node5 [label="vector\< Module * \>",height=0.2,width=0.4,color="grey75"];
+  Node4 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" output_file_name" ,fontname="FreeSans"];
+  Node6 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" inputArea\nswitchPowerLeak\nH_SRAM\noutputArea\nchannelLeakPower\nchannelWirePower\ntCLK\nVdd\nCw\nCw_cpl\n..." ,fontname="FreeSans"];
+  Node6 [label="double",height=0.2,width=0.4,color="grey75"];
+  Node7 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" classes" ,fontname="FreeSans"];
+  Node7 [label="int",height=0.2,width=0.4,color="black",URL="$classint.html"];
+  Node8 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" net" ,fontname="FreeSans"];
+  Node8 [label="Network",height=0.2,width=0.4,color="black",URL="$classNetwork.html"];
+  Node9 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node9 [label="TimedModule",height=0.2,width=0.4,color="black",URL="$classTimedModule.html"];
+  Node3 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node10 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _eject\n_chan\n_inject" ,fontname="FreeSans"];
+  Node10 [label="vector\< FlitChannel * \>",height=0.2,width=0.4,color="grey75"];
+  Node11 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _timed_modules" ,fontname="FreeSans"];
+  Node11 [label="deque\< TimedModule * \>",height=0.2,width=0.4,color="grey75"];
+  Node12 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _routers" ,fontname="FreeSans"];
+  Node12 [label="vector\< Router * \>",height=0.2,width=0.4,color="grey75"];
+  Node7 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _channels\n_nodes\n_size\n_classes" ,fontname="FreeSans"];
+  Node13 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _eject_cred\n_chan_cred\n_inject_cred" ,fontname="FreeSans"];
+  Node13 [label="vector\< Channel * \>",height=0.2,width=0.4,color="grey75"];
+  Node14 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" wire_map" ,fontname="FreeSans"];
+  Node14 [label="map\< double, wire \>",height=0.2,width=0.4,color="grey75"];
+}

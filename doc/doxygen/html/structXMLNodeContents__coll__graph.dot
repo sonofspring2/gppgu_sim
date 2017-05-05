@@ -1,0 +1,24 @@
+digraph "XMLNodeContents"
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  Node1 [label="XMLNodeContents",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" text" ,fontname="FreeSans"];
+  Node2 [label="XMLCSTR",height=0.2,width=0.4,color="grey75"];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" child" ,fontname="FreeSans"];
+  Node3 [label="XMLNode",height=0.2,width=0.4,color="black",URL="$structXMLNode.html",tooltip="Main Class representing a XML node. "];
+  Node3 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" emptyXMLNode" ,fontname="FreeSans"];
+  Node4 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" emptyXMLAttribute" ,fontname="FreeSans"];
+  Node4 [label="XMLAttribute",height=0.2,width=0.4,color="black",URL="$structXMLAttribute.html",tooltip="Structure for XML attribute. "];
+  Node2 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" lpszName\nlpszValue" ,fontname="FreeSans"];
+  Node5 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" emptyXMLClear" ,fontname="FreeSans"];
+  Node5 [label="XMLClear",height=0.2,width=0.4,color="black",URL="$structXMLClear.html",tooltip="Structure for XML clear (unformatted) node (usually comments) "];
+  Node2 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" lpszOpenTag\nlpszCloseTag\nlpszValue" ,fontname="FreeSans"];
+  Node6 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" d" ,fontname="FreeSans"];
+  Node6 [label="XMLNodeData *",height=0.2,width=0.4,color="grey75"];
+  Node5 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" clear" ,fontname="FreeSans"];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" attrib" ,fontname="FreeSans"];
+  Node7 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" etype" ,fontname="FreeSans"];
+  Node7 [label="enum XMLElementType",height=0.2,width=0.4,color="grey75"];
+}

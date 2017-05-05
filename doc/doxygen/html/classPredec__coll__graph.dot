@@ -1,0 +1,45 @@
+digraph "Predec"
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  Node2 [label="Predec",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node3 [label="Component",height=0.2,width=0.4,color="black",URL="$classComponent.html"];
+  Node4 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" cycle_time\ndelay" ,fontname="FreeSans"];
+  Node4 [label="double",height=0.2,width=0.4,color="grey75"];
+  Node5 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" rt_power\npower" ,fontname="FreeSans"];
+  Node5 [label="powerDef",height=0.2,width=0.4,color="black",URL="$classpowerDef.html"];
+  Node6 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" writeOp\nreadOp\nsearchOp" ,fontname="FreeSans"];
+  Node6 [label="powerComponents",height=0.2,width=0.4,color="black",URL="$classpowerComponents.html"];
+  Node4 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" leakage\nshort_circuit\ndynamic\ngate_leakage\nlonger_channel\l_leakage" ,fontname="FreeSans"];
+  Node7 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" area" ,fontname="FreeSans"];
+  Node7 [label="Area",height=0.2,width=0.4,color="black",URL="$classArea.html"];
+  Node4 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" w\nh\narea" ,fontname="FreeSans"];
+  Node5 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" driver_power\nblock_power" ,fontname="FreeSans"];
+  Node8 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" blk1\nblk2" ,fontname="FreeSans"];
+  Node8 [label="PredecBlk",height=0.2,width=0.4,color="black",URL="$classPredecBlk.html"];
+  Node3 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node4 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" delay_nand2_path\ndelay_nand3_path\nw_L2_p\nw_L1_nand3_n\nC_ld_predec_blk\l_out\nw_L1_nand2_n\nw_L1_nand3_p\nR_wire_predec\l_blk_out\nw_L1_nand2_p\nw_L2_n\n..." ,fontname="FreeSans"];
+  Node5 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" power_nand3_path\npower_nand2_path\npower_L2" ,fontname="FreeSans"];
+  Node9 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" dec" ,fontname="FreeSans"];
+  Node9 [label="Decoder",height=0.2,width=0.4,color="black",URL="$classDecoder.html"];
+  Node3 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node4 -> Node9 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" C_ld_dec_out\nw_dec_n\ndelay\nR_wire_dec_out\nw_dec_p" ,fontname="FreeSans"];
+  Node10 -> Node9 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" num_gates_min\nnum_in_signals\nnum_gates" ,fontname="FreeSans"];
+  Node10 [label="int",height=0.2,width=0.4,color="black",URL="$classint.html"];
+  Node11 -> Node9 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" fully_assoc\nexist\nis_dram\nis_wl_tr" ,fontname="FreeSans"];
+  Node11 [label="bool",height=0.2,width=0.4,color="grey75"];
+  Node7 -> Node9 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" cell" ,fontname="FreeSans"];
+  Node10 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" branch_effort_nand3\l_gate_output\nnum_L1_active_nand2\l_path\nnumber_gates_L2\nnumber_inputs_L1\l_gate\nnumber_input_addr\l_bits\nmin_number_gates\l_L1\nnumber_gates\l_L1_nand2_path\nmin_number_gates\l_L2\nflag_L2_gate\nnumber_gates\l_L1_nand3_path\n..." ,fontname="FreeSans"];
+  Node11 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" exist\nis_dram_\nflag_two_unique\l_paths" ,fontname="FreeSans"];
+  Node12 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" drv1\ndrv2" ,fontname="FreeSans"];
+  Node12 [label="PredecBlkDrv",height=0.2,width=0.4,color="black",URL="$classPredecBlkDrv.html"];
+  Node3 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node4 -> Node12 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" delay_nand2_path\nc_load_nand2_path\l_out\ndelay_nand3_path\nc_load_nand3_path\l_out\nwidth_nand3_path\l_p\nwidth_nand2_path\l_n\nwidth_nand2_path\l_p\nr_load_nand3\l_path_out\nr_load_nand2\l_path_out\nwidth_nand3_path\l_n\n..." ,fontname="FreeSans"];
+  Node5 -> Node12 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" power_nand3_path\npower_nand2_path" ,fontname="FreeSans"];
+  Node9 -> Node12 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" dec" ,fontname="FreeSans"];
+  Node10 -> Node12 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" num_buffers_driving\l_8_nand3_load\nnumber_gates_nand3\l_path\nmin_number_gates\nflag_driver_exists\nnum_buffers_nand3\l_path\nnumber_gates_nand2\l_path\nnumber_input_addr\l_bits\nnum_buffers_driving\l_2_nand3_load\nnum_buffers_driving\l_4_nand2_load\nway_select\n..." ,fontname="FreeSans"];
+  Node11 -> Node12 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" is_dram_" ,fontname="FreeSans"];
+  Node8 -> Node12 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" blk" ,fontname="FreeSans"];
+}

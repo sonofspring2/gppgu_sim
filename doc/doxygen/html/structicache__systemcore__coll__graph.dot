@@ -1,0 +1,11 @@
+digraph "icache_systemcore"
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  Node1 [label="icache_systemcore",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" prefetch_buffer_hits\nprefetch_buffer_reads\nfill_buffer_accesses\nread_misses\nprefetch_buffer_accesses\nread_hits\ntotal_accesses\nicache_config\ntotal_misses\nconflicts\n..." ,fontname="FreeSans"];
+  Node2 [label="double",height=0.2,width=0.4,color="grey75"];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" cache_policy\nbuffer_sizes" ,fontname="FreeSans"];
+  Node3 [label="int",height=0.2,width=0.4,color="black",URL="$classint.html"];
+}

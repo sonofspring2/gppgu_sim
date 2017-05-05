@@ -1,0 +1,20 @@
+digraph "BookSimConfig"
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  Node3 [label="BookSimConfig",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node4 [label="Configuration",height=0.2,width=0.4,color="black",URL="$classConfiguration.html"];
+  Node5 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _config_string" ,fontname="FreeSans"];
+  Node5 [label="string",height=0.2,width=0.4,color="grey75"];
+  Node6 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _config_file" ,fontname="FreeSans"];
+  Node6 [label="FILE *",height=0.2,width=0.4,color="grey75"];
+  Node7 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _int_map" ,fontname="FreeSans"];
+  Node7 [label="map\< string, int \>",height=0.2,width=0.4,color="grey75"];
+  Node8 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _str_map" ,fontname="FreeSans"];
+  Node8 [label="map\< string, string \>",height=0.2,width=0.4,color="grey75"];
+  Node9 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _float_map" ,fontname="FreeSans"];
+  Node9 [label="map\< string, double \>",height=0.2,width=0.4,color="grey75"];
+  Node4 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" theConfig" ,fontname="FreeSans"];
+}

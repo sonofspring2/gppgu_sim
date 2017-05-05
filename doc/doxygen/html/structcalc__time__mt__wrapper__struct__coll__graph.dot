@@ -1,0 +1,18 @@
+digraph "calc_time_mt_wrapper_struct"
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  Node1 [label="calc_time_mt_wrapper\l_struct",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" Nspd_min" ,fontname="FreeSans"];
+  Node2 [label="double",height=0.2,width=0.4,color="grey75"];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" tag_arr\ndata_arr" ,fontname="FreeSans"];
+  Node3 [label="list\< mem_array * \>",height=0.2,width=0.4,color="grey75"];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" tag_res\ndata_res" ,fontname="FreeSans"];
+  Node4 [label="min_values_t",height=0.2,width=0.4,color="black",URL="$classmin__values__t.html"];
+  Node2 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" min_dyn\nmin_delay\nmin_leakage\nmin_cyc\nmin_area" ,fontname="FreeSans"];
+  Node5 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" tid" ,fontname="FreeSans"];
+  Node5 [label="uint32_t",height=0.2,width=0.4,color="grey75"];
+  Node6 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" pure_cam\npure_ram\nis_tag\nis_main_mem" ,fontname="FreeSans"];
+  Node6 [label="bool",height=0.2,width=0.4,color="grey75"];
+}

@@ -1,0 +1,15 @@
+digraph "NoCParam"
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  Node1 [label="NoCParam",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" total_access\nchip_coverage\nduty_cycle\nlink_latency\nexecutionTime\nlink_throughput\nclockRate\nroute_over_perc" ,fontname="FreeSans"];
+  Node2 [label="double",height=0.2,width=0.4,color="grey75"];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" name" ,fontname="FreeSans"];
+  Node3 [label="string",height=0.2,width=0.4,color="grey75"];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" horizontal_nodes\ninput_buffer_entries\l_per_vc\nvirtual_channel_per\l_port\noutput_ports\ninput_ports\nmin_ports\ntotal_nodes\nvertical_nodes\nflit_size\nglobal_linked\l_ports\n..." ,fontname="FreeSans"];
+  Node4 [label="int",height=0.2,width=0.4,color="black",URL="$classint.html"];
+  Node5 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" has_global_link\ntype" ,fontname="FreeSans"];
+  Node5 [label="bool",height=0.2,width=0.4,color="grey75"];
+}

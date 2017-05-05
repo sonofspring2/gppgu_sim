@@ -1,0 +1,10 @@
+digraph "Parsing XML files/strings to an XMLNode structure and Rendering XMLNode&apos;s to files/string."
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir=LR;
+  Node0 [label="Parsing XML files/strings\l to an XMLNode structure\l and Rendering XMLNode's\l to files/string.",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 [label="The XML parser",height=0.2,width=0.4,color="black",URL="$group__XMLParserGeneral.html"];
+  Node1->Node0 [shape=plaintext, dir="back", style="solid"];
+}

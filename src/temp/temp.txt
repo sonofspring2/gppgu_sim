@@ -1,0 +1,72 @@
+48 warps
+gpgpu_simulation_time = 0 days, 0 hrs, 0 min, 12 sec (12 sec)
+gpgpu_simulation_rate = 83465 (inst/sec)
+gpgpu_simulation_rate = 12937 (cycle/sec)
+IPC = 6.6
+
+
+
+8 warps
+gpgpu_simulation_time = 0 days, 0 hrs, 0 min, 11 sec (11 sec)
+gpgpu_simulation_rate = 91053 (inst/sec)
+gpgpu_simulation_rate = 14113 (cycle/sec)
+IPC = 6.4
+
+
+warp_limiting 1
+gpgpu_simulation_time = 0 days, 0 hrs, 0 min, 6 sec (6 sec)
+gpgpu_simulation_rate = 166930 (inst/sec)
+gpgpu_simulation_rate = 10442 (cycle/sec)
+IPC=15.98
+
+warp_limiting 8
+#run1
+gpgpu_simulation_time = 0 days, 0 hrs, 0 min, 6 sec (6 sec)
+gpgpu_simulation_rate = 166930 (inst/sec)
+gpgpu_simulation_rate = 7198 (cycle/sec)
+IPC=23.19
+#run2
+gpgpu_simulation_time = 0 days, 0 hrs, 0 min, 5 sec (5 sec)
+gpgpu_simulation_rate = 200316 (inst/sec)
+gpgpu_simulation_rate = 8637 (cycle/sec)
+IPC=23.19
+
+
+warp_limiting 8 and 1; toggle
+#run1
+gpgpu_simulation_time = 0 days, 0 hrs, 0 min, 6 sec (6 sec)
+gpgpu_simulation_rate = 166930 (inst/sec)
+gpgpu_simulation_rate = 8248 (cycle/sec)
+IPC=20.23
+#run2
+gpgpu_simulation_time = 0 days, 0 hrs, 0 min, 7 sec (7 sec)
+gpgpu_simulation_rate = 143083 (inst/sec)
+gpgpu_simulation_rate = 7070 (cycle/sec)
+IPC=20.23
+
+
+
+
+/**************************************************************/
+warp limit 32
+m_memport full count: 4675
+warp limit 16
+m_memport full count: 4675
+warp limit 8
+m_memport full count: 4675
+warp limit 4
+m_memport full count: 4675
+warp limit 2
+m_memport full count: 40
+warp limit 1
+m_memport full count: 0
+/**************************************************************/
+
+
+
+
+# scheduler: change to
+# Loose round robbin scheduler
+-gpgpu_scheduler lrr
+# Greedy then oldest scheduler
+#-gpgpu_scheduler gto

@@ -1,0 +1,11 @@
+digraph "PermutationTrafficPattern"
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  Node12 [label="PermutationTrafficPattern",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node13 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node13 [label="TrafficPattern",height=0.2,width=0.4,color="black",URL="$classTrafficPattern.html"];
+  Node14 -> Node13 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _nodes" ,fontname="FreeSans"];
+  Node14 [label="int",height=0.2,width=0.4,color="black",URL="$classint.html"];
+}

@@ -1,0 +1,17 @@
+digraph "Component"
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  Node50 [label="Component",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node51 -> Node50 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" cycle_time\ndelay" ,fontname="FreeSans"];
+  Node51 [label="double",height=0.2,width=0.4,color="grey75"];
+  Node52 -> Node50 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" rt_power\npower" ,fontname="FreeSans"];
+  Node52 [label="powerDef",height=0.2,width=0.4,color="black",URL="$classpowerDef.html"];
+  Node53 -> Node52 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" writeOp\nreadOp\nsearchOp" ,fontname="FreeSans"];
+  Node53 [label="powerComponents",height=0.2,width=0.4,color="black",URL="$classpowerComponents.html"];
+  Node51 -> Node53 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" leakage\nshort_circuit\ndynamic\ngate_leakage\nlonger_channel\l_leakage" ,fontname="FreeSans"];
+  Node54 -> Node50 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" area" ,fontname="FreeSans"];
+  Node54 [label="Area",height=0.2,width=0.4,color="black",URL="$classArea.html"];
+  Node51 -> Node54 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" w\nh\narea" ,fontname="FreeSans"];
+}

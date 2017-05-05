@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['data_5fblock',['data_block',['../structtex__cache_1_1data__block.html',1,'tex_cache']]],
+  ['data_5fcache',['data_cache',['../classdata__cache.html',1,'']]],
+  ['datacache',['DataCache',['../classDataCache.html',1,'']]],
+  ['dcache_5fsystemcore',['dcache_systemcore',['../structdcache__systemcore.html',1,'']]],
+  ['decoder',['Decoder',['../classDecoder.html',1,'']]],
+  ['denseallocator',['DenseAllocator',['../classDenseAllocator.html',1,'']]],
+  ['dep_5fresource_5fconflict_5fcheck',['dep_resource_conflict_check',['../classdep__resource__conflict__check.html',1,'']]],
+  ['devicetype',['DeviceType',['../classTechnologyParameter_1_1DeviceType.html',1,'TechnologyParameter']]],
+  ['dffcell',['DFFCell',['../classDFFCell.html',1,'']]],
+  ['diagonaltrafficpattern',['DiagonalTrafficPattern',['../classDiagonalTrafficPattern.html',1,'']]],
+  ['digitpermutationtrafficpattern',['DigitPermutationTrafficPattern',['../classDigitPermutationTrafficPattern.html',1,'']]],
+  ['dim3',['dim3',['../structdim3.html',1,'']]],
+  ['dispatch_5funit_5ft',['dispatch_unit_t',['../classopndcoll__rfu__t_1_1dispatch__unit__t.html',1,'opndcoll_rfu_t']]],
+  ['dragonflynew',['DragonFlyNew',['../classDragonFlyNew.html',1,'']]],
+  ['dram',['DRAM',['../classDRAM.html',1,'']]],
+  ['dram_5fcallback_5ft',['dram_callback_t',['../structdram__callback__t.html',1,'']]],
+  ['dram_5fdelay_5ft',['dram_delay_t',['../structmemory__partition__unit_1_1dram__delay__t.html',1,'memory_partition_unit']]],
+  ['dram_5freq_5ft',['dram_req_t',['../classdram__req__t.html',1,'']]],
+  ['dram_5ft',['dram_t',['../classdram__t.html',1,'']]],
+  ['dramparam',['DRAMParam',['../classDRAMParam.html',1,'']]],
+  ['driver',['Driver',['../classDriver.html',1,'']]],
+  ['dtlb_5fsystemcore',['dtlb_systemcore',['../structdtlb__systemcore.html',1,'']]],
+  ['dynamiclimitedsharedbufferpolicy',['DynamicLimitedSharedBufferPolicy',['../classBufferState_1_1DynamicLimitedSharedBufferPolicy.html',1,'BufferState']]],
+  ['dynamicparameter',['DynamicParameter',['../classDynamicParameter.html',1,'']]]
+];

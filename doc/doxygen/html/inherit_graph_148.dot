@@ -1,0 +1,12 @@
+digraph "Graphical Class Hierarchy"
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node255 [label="gpgpu_functional_sim\l_config",height=0.2,width=0.4,color="black",URL="$classgpgpu__functional__sim__config.html"];
+  Node255 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node1 [label="gpgpu_sim_config",height=0.2,width=0.4,color="black",URL="$classgpgpu__sim__config.html"];
+  Node0 [label="power_config",height=0.2,width=0.4,color="black",URL="$structpower__config.html"];
+  Node0 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+}

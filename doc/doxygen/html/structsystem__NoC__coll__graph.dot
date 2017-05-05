@@ -1,0 +1,19 @@
+digraph "system_NoC"
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  Node1 [label="system_NoC",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" duty_cycle\nchip_coverage\ntotal_accesses\nroute_over_perc" ,fontname="FreeSans"];
+  Node2 [label="double",height=0.2,width=0.4,color="grey75"];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" crosspoint_type\ncrossbar_type\ntopology" ,fontname="FreeSans"];
+  Node3 [label="char",height=0.2,width=0.4,color="grey75"];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" input_buffer_entries\l_per_vc\nflit_bits\nhorizontal_nodes\nvirtual_channel_per\l_port\noutput_ports\ninput_ports\nlink_latency\nlink_throughput\nnumber_of_crossbars\nports_of_input_buffer\n..." ,fontname="FreeSans"];
+  Node4 [label="int",height=0.2,width=0.4,color="black",URL="$classint.html"];
+  Node5 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" has_global_link\ntype" ,fontname="FreeSans"];
+  Node5 [label="bool",height=0.2,width=0.4,color="grey75"];
+  Node6 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" xbar0" ,fontname="FreeSans"];
+  Node6 [label="xbar0_systemNoC",height=0.2,width=0.4,color="black",URL="$structxbar0__systemNoC.html"];
+  Node2 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" crossbar_accesses" ,fontname="FreeSans"];
+  Node4 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" flit_bits\nnumber_of_outputs\l_of_crossbars\nnumber_of_inputs\l_of_crossbars\nports_of_input_buffer\ninput_buffer_entries\l_per_port" ,fontname="FreeSans"];
+}

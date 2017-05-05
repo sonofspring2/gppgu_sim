@@ -1,0 +1,24 @@
+digraph "TechnologyParameter"
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="TechnologyParameter",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" h_dec" ,fontname="FreeSans"];
+  Node2 [label="uint64_t",height=0.2,width=0.4,color="grey75"];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" w_comp_inv_n2\nram_wl_stitching\l_overhead_\ncell_h_def\nMIN_GAP_BET_SAME\l_TYPE_DIFFS\ndram_cell_Vdd\nw_comp_inv_n3\nw_comp_inv_p1\nw_comp_inv_p2\nsense_delay\nw_comp_inv_p3\n..." ,fontname="FreeSans"];
+  Node3 [label="double",height=0.2,width=0.4,color="grey75"];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" scaling_factor" ,fontname="FreeSans"];
+  Node4 [label="TechnologyParameter\l::ScalingFactor",height=0.2,width=0.4,color="black",URL="$classTechnologyParameter_1_1ScalingFactor.html"];
+  Node3 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" long_channel_leakage\l_reduction\nlogic_scaling_co_eff\ncore_tx_density" ,fontname="FreeSans"];
+  Node5 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" cam\ndram\nsram" ,fontname="FreeSans"];
+  Node5 [label="TechnologyParameter\l::MemoryType",height=0.2,width=0.4,color="black",URL="$classTechnologyParameter_1_1MemoryType.html"];
+  Node3 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" cell_nmos_w\nb_w\ncell_pmos_w\nb_h\nVbitpre\ncell_a_w" ,fontname="FreeSans"];
+  Node6 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" dram_acc\nsram_cell\nperi_global\ndram_wl\ncam_cell" ,fontname="FreeSans"];
+  Node6 [label="TechnologyParameter\l::DeviceType",height=0.2,width=0.4,color="black",URL="$classTechnologyParameter_1_1DeviceType.html"];
+  Node3 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" long_channel_leakage\l_reduction\nVdd\nI_on_n\nC_fringe\nC_ox\nI_g_on_n\nI_on_p\nC_g_ideal\nt_ox\nVth\n..." ,fontname="FreeSans"];
+  Node7 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" wire_inside_mat\nwire_local\nwire_outside_mat" ,fontname="FreeSans"];
+  Node7 [label="TechnologyParameter\l::InterconnectType",height=0.2,width=0.4,color="black",URL="$classTechnologyParameter_1_1InterconnectType.html"];
+  Node3 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" C_per_um\nR_per_um\nhoriz_dielectric\l_constant\nild_thickness\naspect_ratio\nmiller_value\npitch\nvert_dielectric\l_constant" ,fontname="FreeSans"];
+}

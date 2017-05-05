@@ -1,0 +1,44 @@
+digraph "TimedModule"
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="TimedModule",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node1 [label="Module",height=0.2,width=0.4,color="black",URL="$classModule.html"];
+  Node0 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 [label="Channel\< T \>",height=0.2,width=0.4,color="black",URL="$classChannel.html"];
+  Node0 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node3 [label="Channel\< Flit \>",height=0.2,width=0.4,color="black",URL="$classChannel.html"];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node4 [label="FlitChannel",height=0.2,width=0.4,color="black",URL="$classFlitChannel.html"];
+  Node0 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node5 [label="Network",height=0.2,width=0.4,color="black",URL="$classNetwork.html"];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node6 [label="AnyNet",height=0.2,width=0.4,color="black",URL="$classAnyNet.html"];
+  Node5 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node7 [label="CMesh",height=0.2,width=0.4,color="black",URL="$classCMesh.html"];
+  Node5 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node8 [label="DragonFlyNew",height=0.2,width=0.4,color="black",URL="$classDragonFlyNew.html"];
+  Node5 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node9 [label="FatTree",height=0.2,width=0.4,color="black",URL="$classFatTree.html"];
+  Node5 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node10 [label="FlatFlyOnChip",height=0.2,width=0.4,color="black",URL="$classFlatFlyOnChip.html"];
+  Node5 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node11 [label="KNCube",height=0.2,width=0.4,color="black",URL="$classKNCube.html"];
+  Node5 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node12 [label="KNFly",height=0.2,width=0.4,color="black",URL="$classKNFly.html"];
+  Node5 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node13 [label="QTree",height=0.2,width=0.4,color="black",URL="$classQTree.html"];
+  Node5 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node14 [label="Tree4",height=0.2,width=0.4,color="black",URL="$classTree4.html"];
+  Node0 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node15 [label="Router",height=0.2,width=0.4,color="black",URL="$classRouter.html"];
+  Node15 -> Node16 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node16 [label="ChaosRouter",height=0.2,width=0.4,color="black",URL="$classChaosRouter.html"];
+  Node15 -> Node17 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node17 [label="EventRouter",height=0.2,width=0.4,color="black",URL="$classEventRouter.html"];
+  Node15 -> Node18 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node18 [label="IQRouter",height=0.2,width=0.4,color="black",URL="$classIQRouter.html"];
+}

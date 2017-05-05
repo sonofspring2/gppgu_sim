@@ -1,0 +1,15 @@
+digraph "power_config"
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  Node2 [label="power_config",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node3 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" gpu_min_inc_per_active\l_sm\ngpu_steady_power\l_deviation\ngpu_steady_min_period\ngpu_idle_core_power" ,fontname="FreeSans"];
+  Node3 [label="double",height=0.2,width=0.4,color="grey75"];
+  Node4 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" gpu_nonlinear_model\l_config\ng_power_filename\ng_steady_state_tracking\l_filename\ng_power_trace_filename\ng_metric_trace_filename\ng_power_config_name\ngpu_steady_state_definition" ,fontname="FreeSans"];
+  Node4 [label="char",height=0.2,width=0.4,color="grey75"];
+  Node5 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" g_power_trace_zlevel" ,fontname="FreeSans"];
+  Node5 [label="int",height=0.2,width=0.4,color="black",URL="$classint.html"];
+  Node6 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" g_use_nonlinear_model\ng_power_simulator_debug\ng_power_trace_enabled\ng_steady_power_levels\l_enabled\ng_power_simulation_enabled\ng_power_per_cycle_dump\nm_valid" ,fontname="FreeSans"];
+  Node6 [label="bool",height=0.2,width=0.4,color="grey75"];
+}
